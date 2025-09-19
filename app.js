@@ -20,3 +20,31 @@ function agregarAmigo() {
 
     return;
 }
+
+function amigoRepetido(amigo) { //verificar
+    let agregarRepetido;
+    let veces = 0;
+
+    for (let i = 0; i < amigos.length; i++) {
+        if(amigos[i]===amigo){
+            veces++;
+        }
+    }
+
+     if(veces === 0){
+        return 'agregar';
+    } else { //Creo que este else no hace falta
+        agregarRepetido = confirm(`Ya ingregó ese nombre ${veces} ${veces > 1 ? 'veces' : 'vez'} ¿Quieres continuar?`); 
+        return agregarRepetido === true ? 'agregar' : 'ignorar';
+    }
+}
+//listar
+function listarAmigos() {
+    let contenidoDeLista = '';
+
+    for(let i = 0; i<amigos.length; i++){
+        contenidoDeLista+= `<li> ${amigos[i]} </li>`;
+    }
+    listaHTML.innerHTML=contenidoDeLista; //No hace falta vaciar el elemento. Con esta variable reemplazamos el contenido.
+    return;
+}
