@@ -50,9 +50,9 @@ function listarAmigos() {
 }
 //sortear
 function sortearAmigo() {
-    let indexGanador = Math.floor(Math.random()*amigos.length); 
+    let nombreGanador = Math.floor(Math.random()*amigos.length); 
     if(amigos.length > 0) {
-        resultado.innerHTML=`Tu amigo secreto es ${amigos[indexGanador]}`;
+        resultado.innerHTML=`Tu amigo secreto es ${amigos[nombreGanador]}`;
     }else {
         resultado.innerHTML='Ingrese los Nombres a sortear';
     }
