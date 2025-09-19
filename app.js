@@ -20,7 +20,7 @@ function agregarAmigo() {
 
     return;
 }
-
+//buscarrepetido
 function amigoRepetido(amigo) { //verificar
     let agregarRepetido;
     let veces = 0;
@@ -47,4 +47,15 @@ function listarAmigos() {
     }
     listaHTML.innerHTML=contenidoDeLista; //No hace falta vaciar el elemento. Con esta variable reemplazamos el contenido.
     return;
+}
+//sortear
+function sortearAmigo() {
+    let indexGanador = Math.floor(Math.random()*amigos.length); //No hace falta sumar 1. Los valores se guardan desde la posición 0
+
+    if(amigos.length > 0) {
+        resultado.innerHTML=`Tu amigo secreto es ${amigos[indexGanador]}`;
+    }else {
+        resultado.innerHTML='↑ Ingrese los Nombres a sortear ↑';
+    }
+
 }
