@@ -33,7 +33,7 @@ function amigoRepetido(amigo) { //verificar
 
      if(veces === 0){
         return 'agregar';
-    } else { //Creo que este else no hace falta
+    } else { 
         agregarRepetido = confirm(`Ya ingregó ese nombre ${veces} ${veces > 1 ? 'veces' : 'vez'} ¿Quieres continuar?`); 
         return agregarRepetido === true ? 'agregar' : 'ignorar';
     }
@@ -50,12 +50,11 @@ function listarAmigos() {
 }
 //sortear
 function sortearAmigo() {
-    let indexGanador = Math.floor(Math.random()*amigos.length); //No hace falta sumar 1. Los valores se guardan desde la posición 0
-
+    let indexGanador = Math.floor(Math.random()*amigos.length); 
     if(amigos.length > 0) {
         resultado.innerHTML=`Tu amigo secreto es ${amigos[indexGanador]}`;
     }else {
-        resultado.innerHTML='↑ Ingrese los Nombres a sortear ↑';
+        resultado.innerHTML='Ingrese los Nombres a sortear';
     }
 
 }
